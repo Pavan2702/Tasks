@@ -7,6 +7,10 @@ import User from '../../../public/img.png';
 import Resumeicon from "../../../public/Resumizeme.svg";
 import Union from "../../../public/Union.svg";
 import MiniAdd from "../../../public/icon mini add.svg";
+import Board from "../../../public/icon board.svg";
+import Folder from "../../../public/Folder.png";
+import Lock from "../../../public/Lock.png";
+import clock from "../../../public/clock.png";
 
 const Sidebar = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -20,12 +24,12 @@ const Sidebar = () => {
         { name: "Management", type: "Star" },
         { name: "Data Analysis", type: "Star" },
         { name: "Computer Technician", type: "Star" },
+        { name: "Computers and Information", type: "clock" },
+        { name: "Database Administrator", type: "clock" },
+        { name: "Computer Security", type: "clock" },
+        { name: "Computer Systems Analyst", type: "clock" },
         { name: "Past search 1", type: "clock" },
         { name: "Past search 2", type: "clock" },
-        { name: "Computers and Information", type: "Star" },
-        { name: "Database Administrator", type: "Star" },
-        { name: "Computer Security", type: "Star" },
-        { name: "Computer Systems Analyst", type: "Star" },
     ];
 
     const boards = [
@@ -65,7 +69,7 @@ const Sidebar = () => {
                             className="outline-none w-full text-sm text-black placeholder:text-black"
                         />
                     </div>
-                    <ul className="space-y-2 text-gray-600">
+                    <ul className="space-y-3 text-[#4C4C55]">
                         {filteredTemplates.length > 0 ? (
                             filteredTemplates.map((item) => (
                                 <li key={item.name} className="flex items-center text-[13px]">
@@ -76,7 +80,7 @@ const Sidebar = () => {
                                             className="mr-2"
                                         />
                                     ) : (
-                                        <FaClock className="text-gray-500 mr-2" />
+                                        <Image src={clock} alt="" className="mr-2" />
                                     )}
                                     {item.name}
                                 </li>
@@ -87,19 +91,22 @@ const Sidebar = () => {
                     </ul>
                 </div>
 
-                <div className="mt-6 px-1">
+                <div className="mt-2 px-1">
                     <div className="flex justify-between">
-                        <h2 className="text-lg font-semibold text-gray-700 mb-2">My Boards</h2>
+                        <div className="flex items-center text-center gap-2">
+                            <Image src={Board} alt="" />
+                            <h2 className="text-lg font-semibold text-gray-700">My Boards</h2>
+                        </div>
                         <Image src={MiniAdd} alt="" />
                     </div>
-                    <ul className="space-y-2 text-gray-600">
+                    <ul className="space-y-3 pt-1 text-[#4C4C55]">
                         {filteredBoards.length > 0 ? (
                             filteredBoards.map((item) => (
-                                <li key={item.name} className="flex items-center">
+                                <li key={item.name} className="flex items-center text-[13px]">
                                     {item.type === "folder" ? (
-                                        <FaFolder className="text-orange-500 mr-2" />
+                                        <Image src={Folder} alt="" className="mr-2" />
                                     ) : (
-                                        <FaLock className="text-gray-500 mr-2" />
+                                        <Image src={Lock} alt="" className="mr-2" />
                                     )}
                                     {item.name}
                                 </li>
@@ -118,7 +125,7 @@ const Sidebar = () => {
                             alt="User"
                             className="w-10 h-10 rounded-full"
                         />
-               
+
                         <p className="text-gray-700 font-semibold">Carla</p>
                     </div>
                     <div>

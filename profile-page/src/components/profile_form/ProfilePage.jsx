@@ -139,14 +139,14 @@ const PersonalInfoForm = () => {
               />
             </div>
 
-            <p>
+            <p className='text-[15px] leading-[22px] text-[#4C4C55]'>
               Use this email to log in to your{' '}
               <span className="text-[#1688FE]">resumedone.io</span> account and receive notifications.
             </p>
 
             <button
               type="submit"
-              className="w-[170px] flex my-4 justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="w-[170px] flex my-4 justify-center py-2 px-4 border border-transparent rounded-[4px] text-[15px] font-medium text-white bg-[#1688FE] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1688FE]"
             >
               Save
             </button>
@@ -159,14 +159,14 @@ const PersonalInfoForm = () => {
                 onChange={handleChange}
                 className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
               />
-              <label className="ml-2 block text-sm text-gray-700">
+              <label className="ml-2 block text-[13px] text-[#4C4C55]">
                 Show my profile to serious employers
               </label>
             </div>
           </div>
 
           <div className="col-span-4">
-            <div className="w-[144px] h-[144px] bg-gray-200 rounded-full overflow-hidden relative">
+            <div className="w-[144px] h-[144px] rounded-full overflow-hidden relative">
               <div onClick={handleImageClick} className="cursor-pointer">
                 <Image
                   src={selectedImage || UserImage}
@@ -190,7 +190,7 @@ const PersonalInfoForm = () => {
         </div>
       </form>
 
-      <div className="mt-8 pt-8 border pl-4 border-[#E3E3E4]">
+      <div className="mt-8 py-4 border pl-4 border-[#E3E3E4]">
         <h3 className="text-lg font-medium text-gray-900">Delete account</h3>
         <p className="mt-1 text-sm text-gray-500">
           If you delete your account you'll be permanently removing it from our systems - you can't undo it.
@@ -201,10 +201,10 @@ const PersonalInfoForm = () => {
         </button>
       </div>
 
-      <div className="mt-8 pt-8 border-gray-200 text-sm text-gray-500">
+      <div className="pt-8 border-gray-200 text-sm text-gray-500">
         <p className='border-b pb-4'>
           <span className="text-[#1688FE]">Get in touch with our support team</span> if you have any
-          questions or want to leave some feedback. We'll be happy to hear from you.
+          questions or want to leave some feedback.<br /> We'll be happy to hear from you.
         </p>
 
         <div className="mt-6 flex space-x-4">
