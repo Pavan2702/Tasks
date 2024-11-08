@@ -5,7 +5,7 @@ const Header = () => (
     <header className="bg-[#008B5D] flex items-center text-white p-6 rounded-lg mb-6 shadow-md">
         {/* Icon */}
         <div className="mr-4">
-            <Image src={RoboIcon} alt="Premium Icon" height={72} width={72} className="h-[72px] w-[72px] "/>
+            <Image src={RoboIcon} alt="Premium Icon" height={72} width={72} className="min-h-[72px] max-h-[72px] max-w-[72px] min-w-[72px] "/>
         </div>
         
         {/* Text Content */}

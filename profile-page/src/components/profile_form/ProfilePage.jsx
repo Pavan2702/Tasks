@@ -47,7 +47,7 @@ const PersonalInfoForm = () => {
   };
 
   return (
-    <div className="p-6 bg-white">
+    <div className="sm:p-6 bg-white">
       <div className="flex items-start justify-between mb-8">
         <h2 className="text-2xl font-semibold">Personal Information</h2>
       </div>
